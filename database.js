@@ -1,22 +1,29 @@
-import { createClient } from '@supabase/supabase-js';
+// Connect to Supabase
+const supabaseUrl = 'YOUR_SUPABASE_URL'; // Replace with your project URL
+const supabaseKey = 'YOUR_SUPABASE_ANON_KEY'; // Replace with your anon key
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
-const supabaseUrl = 'YOUR_SUPABASE_URL';
-const supabaseKey = 'YOUR_SUPABASE_ANON_KEY';
-const supabase = createClient(supabaseUrl, supabaseKey);
-
-// Save form data to Supabase
+// Handle Form Submission
 document.getElementById('signupForm').addEventListener('submit', async (event) => {
     event.preventDefault();
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
 
-    const { data, error } = await supabase
-        .from('signups')
-        .insert([{ name, email }]);
+    try {
+        const { data, error } = await supabase
+            .from('signups') // Table name
+            .insert([{ name, email }]); // Insert form data
 
-    if (error) {
-        console.error('Error saving to Supabase:', error);
-    } else {
-        alert('Signup successful!');
+        if (error) {
+            console.error('Error inserting data:', error);
+            alert('There was an error. Please try again.');
+        } else {
+            alert('Signup successful!');
+            document.getElementById('signupForm').reset(); // Clear the form
+        }
+    } catch (error) {
+        console.error('Unexpected error:', error);
+        alert('Unexpected error occurred. Please try again later.');
     }
 });
