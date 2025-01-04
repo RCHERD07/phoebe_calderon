@@ -1,6 +1,6 @@
 // Connect to Supabase
-const supabaseUrl = 'YOUR_SUPABASE_URL'; // Replace with your project URL
-const supabaseKey = 'YOUR_SUPABASE_ANON_KEY'; // Replace with your anon key
+const supabaseUrl = 'https://aazoxfwgfhbzdlzoezvq.supabase.co'; 
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFhem94ZndnZmhiemRsem9lenZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzU4NTI2ODQsImV4cCI6MjA1MTQyODY4NH0.nvvL7gIBDkdpZQDCB1k7D1z6uJaJ1ClJmM5Si5IscNA'; 
 const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 // Handle Form Submission
