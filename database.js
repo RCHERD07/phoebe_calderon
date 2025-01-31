@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const supabaseUrl = 'https://aazoxfwgfhbzdlzoezvq.supabase.co'; 
     const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFhem94ZndnZmhiemRsem9lenZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzU4NTI2ODQsImV4cCI6MjA1MTQyODY4NH0.nvvL7gIBDkdpZQDCB1k7D1z6uJaJ1ClJmM5Si5IscNA';
 
-    const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+    const supabase = supabase.createClient(supabaseUrl, supabaseKey);
     console.log("Supabase client initialized:", supabase);
 
     // Handle Form Submission
