@@ -2,7 +2,7 @@ let supabase;
 
 // Ensure Supabase SDK is loaded before initializing
 document.addEventListener("DOMContentLoaded", () => {
-    if (typeof supabase === "undefined" || !supabase.createClient)
+    if (typeof supabase === "undefined" || !supabase.createClient){
         console.error("Supabase SDK not loaded. Make sure the script is included in index.html.");
         return;
     }
