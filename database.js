@@ -4,20 +4,23 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 // Handle Form Submission
-document.getElementById('signupButton').addEventListener('click', async () => {
+document.getElementById('signupForm').addEventListener('submit', async (event) => {
     event.preventDefault();
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
 
     try {
-        const { data, error } = await supabase.from('signups').insert([{ name, email }]);
+        const { data, error } = await supabase
+            .from('signups') // Table name
+            .insert([{ name, email }]); // Insert form data
 
         if (error) {
             console.error('Error inserting data:', error);
             alert('There was an error. Please try again.');
         } else {
             alert('Signup successful!');
-            document.getElementById('signupForm').reset();
+            document.getElementById('signupForm').reset(); // Clear the form
         }
     } catch (error) {
         console.error('Unexpected error:', error);
