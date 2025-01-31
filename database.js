@@ -4,7 +4,7 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 // Handle Form Submission
-document.getElementById('signupForm').addEventListener('click', async () => {
+document.getElementById('signupButton').addEventListener('click', async () => {
     event.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
