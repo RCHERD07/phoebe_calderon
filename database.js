@@ -1,4 +1,4 @@
-let supabase;
+//let supabase;
 
 // Ensure Supabase SDK is loaded before initializing
 document.addEventListener("DOMContentLoaded", () => {
