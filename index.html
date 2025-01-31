@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <title>Baby Shower RSVP</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <h1>Baby Shower RSVP</h1>
-    <form id="signupForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <br>
-      <label for="name">Address:</label>
-      <input type="text" id="address" name="address" required>
-      <br>
-      <button type="submit">RSVP</button>
-    </form>
-    <p id="successMessage" style="display: none; color: green;">Thank you for signing up! Looking forward to celebrating with you!</p>
-    <script defer src="database.js"></script>
+    <div class="container">
+      <h1>Baby Shower RSVP</h1>
+      <form id="signupForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="name">Address:</label>
+        <input type="text" id="address" name="address" required>
+        <br>
+        <button type="submit">RSVP</button>
+      </form>
+      <p id="successMessage" style="display: none; color: green;">Thank you for signing up! Looking forward to celebrating with you!</p>
+      <script defer src="database.js"></script>
+    </div>
   </body>
 
 </html>
