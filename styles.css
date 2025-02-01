@@ -71,6 +71,14 @@ header {
     border-radius: 5px;
 }
 
+.nav-links hr {
+    border: none; /* Remove default border */
+    height: 1px; /* Thickness of the line */
+    background-color: white; /* Force it to be white */
+    width: 80%; /* Adjust width for better aesthetics */
+    margin: 5px auto; /* Center it within the menu */
+}
+
 /* Mobile Menu Icon */
 .menu-toggle {
     display: block; /* Make sure the hamburger icon is always visible */
