@@ -106,9 +106,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height */
+    overflow-x: hidden; /* Prevent horizontal scroll issues */
 }
 
-/* Container */
+/* Container: Prevent Overlap with Header */
 .container {
     background: #eeeebc;
     padding: 20px;
@@ -119,9 +120,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* Provides space below the fixed navbar */
+    margin-top: 20px; /* Push container down further */
 }
-
 /* Image */
 .form-image {
     width: 100%;
