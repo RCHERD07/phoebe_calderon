@@ -10,6 +10,18 @@
   </head>
 
   <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Baby Calderon</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="registry.html">Registry</a></li>
+          <li><a href="bricknlaurel.html">Location</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+      </nav>
+    </header>
+
     <div class="container">
       <img src="./images/invite.png" alt="Baby Shower" class="form-image">
       <h1>Baby Shower RSVP</h1>
@@ -23,10 +35,14 @@
         <label for="name">Address:</label>
         <input type="text" id="address" name="address" required>
         <br>
+        <label for="plusones"># of Guests:</label>
+        <input type="int" id="plusones" name="plusones" required>
+        <br>
         <button type="submit">RSVP</button>
       </form>
       <p id="successMessage" style="display: none; color: green;">Thank you for signing up! Looking forward to celebrating with you!</p>
       <script defer src="database.js"></script>
+      <script src="script.js"></script>
     </div>
   </body>
 

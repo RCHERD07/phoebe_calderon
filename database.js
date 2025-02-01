@@ -19,9 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const address = document.getElementById('address').value;
+    const plusones = document.getElementById('plusones').value;
 
     try {
-      const { data, error } = await supabaseClient.from('calderon_rsvps').insert([{ name, email, address }]);
+      const { data, error } = await supabaseClient.from('calderon_rsvps').insert([{ name, email, address, plusones }]);
 
       if (error) {
         console.error('Error inserting data:', error);
