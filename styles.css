@@ -12,35 +12,31 @@ body {
 
 /* Container */
 .container {
-    background: #eeeebc; /* Background color */
+    background: #b9c282; /* Background color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 90%; /* Make the form width responsive */
+    max-width: 400px; /* Prevent it from becoming too wide */
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the form inside the container */
+    align-items: center;
 }
 
+/* Image */
 .form-image {
-    width: 100%; /* Makes the image responsive */
-    max-width: 300px; /* Prevents the image from being too large */
+    width: 100%; /* Ensures it scales properly */
+    max-width: 250px; /* Limits maximum size */
     border-radius: 10px; /* Adds rounded corners */
-    margin-bottom: 15px; /* Adds space between the image and the heading */
-}
-
-/* Heading */
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Space between the image and heading */
 }
 
 /* Form */
 form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the form fields */
+    align-items: center; /* Centers form fields */
     width: 100%;
 }
 
@@ -49,17 +45,17 @@ label {
     font-weight: bold;
     margin-bottom: 5px;
     text-align: left;
-    width: 80%; /* Ensures labels align with inputs */
+    width: 80%; /* Aligns with input fields */
 }
 
 /* Inputs */
 input {
-    width: 80%; /* Centers the input fields */
+    width: 80%; /* Scales input fields */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    margin-bottom: 10px; /* Space between inputs */
+    margin-bottom: 10px;
 }
 
 /* Button */
@@ -90,6 +86,14 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 400px) {
     .container {
-        width: 90%;
+        width: 95%; /* Use more of the screen width on small devices */
+    }
+
+    input, button, label {
+        width: 90%; /* Makes sure everything is easier to type on */
+    }
+
+    .form-image {
+        max-width: 200px; /* Slightly smaller image for very small screens */
     }
 }
