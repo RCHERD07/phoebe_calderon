@@ -11,7 +11,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background: #b9c282;
+    background: rgb(185, 194, 130);
     z-index: 1000; /* Keeps it above other content */
 }
 
@@ -156,7 +156,7 @@ body {
 .container-registry {
     position: relative;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -196,11 +196,11 @@ body {
     border-radius: 10px;
     border: 3px solid #5e4206; /* Set border width, style, and color */
     margin-bottom: 15px;
-    opacity: 0.5; /* Adjust transparency (0.0 = fully transparent, 1.0 = solid) */
+    opacity: 0.8; /* Adjust transparency (0.0 = fully transparent, 1.0 = solid) */
 }
 
 .registry-image:hover {
-    opacity: 8.0;
+    opacity: 1.0;
 }
 
 /* Heading */
