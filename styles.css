@@ -330,4 +330,14 @@ button:hover {
     .container-registry {
         width: 90%;
     }
+
+    .modal-content {
+        max-width: 95%; /* Allow more space for small screens */
+        max-height: 95%;
+      }
+    
+      .close {
+        font-size: 25px;
+        right: 10px;
+      }
 }
