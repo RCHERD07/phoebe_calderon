@@ -5,41 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <title>Baby Shower RSVP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Rouge+Script&display=swap" rel="stylesheet">
+
+    <title>Baby Calderon</title>
     <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
+    <div class="body-wrapper"></div>
     <header>
       <nav class="navbar">
-        <div class="logo">Baby Calderon</div>
+        <div class="logo charm-regular">Baby Calderon</div>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li class="charm-bold"><a href="index.html">Event Details</a></li>
           <hr>
-          <li><a href="registry.html">Registry</a></li>
+          <li class="charm-bold"><a href="registry.html">Registry</a></li>
           <hr>
-          <li><a href="bricknlaurel.html">Location</a></li>
+          <li class="charm-bold"><a href="bricknlaurel.html">Location</a></li>
         </ul>
         <div class="menu-toggle">☰</div>
       </nav>
     </header>
 
     <div class="container">
-      <img src="./images/invite.png" alt="Baby Shower" class="form-image">
-      <h1>Baby Shower RSVP</h1>
+      <img src="./images/kazoo.png" alt="Baby Shower" class="form-image">
+      <h1 class="rouge-script-regular">Celebrate With us Sunday, March 30th, at 12:00pm</h1>
       <form id="signupForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <label for="name">Address:</label>
-        <input type="text" id="address" name="address" required>
-        <br>
-        <label for="plusones"># of Guests:</label>
-        <input type="int" id="plusones" name="plusones" required>
-        <br>
+        <label class="charm-bold" for="name">Name:</label>
+        <input class="charm-regular" type="text" id="name" name="name" placeholder="First Last" required>
+        <label class="charm-bold" for="email">Email:</label>
+        <input class="charm-regular" type="email" id="email" name="email" placeholder="youremail@gmail.com" required>
+        <label class="charm-bold" for="name">Address:</label>
+        <input class="charm-regular" id="address" name="address" placeholder="123 Baby Way, San Diego, CA" required>
+        <label class="charm-bold" for="plusones"># of Guests:</label>
+        <input class="charm-regular" type="int" id="plusones" name="plusones" placeholder="# of guests in your party!" required>
         <button type="submit">RSVP</button>
       </form>
       <p id="successMessage" style="display: none; color: green;">Thank you for signing up! Looking forward to celebrating with you!</p>
@@ -49,3 +50,4 @@
   </body>
 
 </html>
+
