@@ -190,8 +190,9 @@ body {
 }
 
 .details-image {
-    width: 150%;
+    width: 95%;
     max-width: 400px;
+    border: 3px solid #5e4206; /* Set border width, style, and color */
     border-radius: 10px;
     margin-bottom: 15px;
     opacity: 0.9; /* Adjust transparency (0.0 = fully transparent, 1.0 = solid) */
