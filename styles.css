@@ -189,6 +189,14 @@ body {
     opacity: 0.5; /* Adjust transparency (0.0 = fully transparent, 1.0 = solid) */
 }
 
+.details-image {
+    width: 150%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    opacity: 0.9; /* Adjust transparency (0.0 = fully transparent, 1.0 = solid) */
+}
+
 /* Image */
 .registry-image {
     width: 100%;
