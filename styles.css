@@ -152,6 +152,22 @@ body {
     margin: auto; /* Centers on the screen */
 }
 
+/* Fix container so form is properly placed */
+.container-registry {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 550px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
 .body-wrapper {
     position: fixed;
     top: 0;
@@ -171,6 +187,20 @@ body {
     border-radius: 10px;
     margin-bottom: 15px;
     opacity: 0.5; /* Adjust transparency (0.0 = fully transparent, 1.0 = solid) */
+}
+
+/* Image */
+.registry-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 3px solid #5e4206; /* Set border width, style, and color */
+    margin-bottom: 15px;
+    opacity: 0.5; /* Adjust transparency (0.0 = fully transparent, 1.0 = solid) */
+}
+
+.registry-image:hover {
+    opacity: 8.0;
 }
 
 /* Heading */
@@ -252,6 +282,10 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 400px) {
     .container {
+        width: 90%;
+    }
+
+    .container-registry {
         width: 90%;
     }
 }
