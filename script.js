@@ -17,24 +17,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Image Modal Logic
   const modal = document.getElementById('myModal');
-  const img = document.getElementById('myImg');
   const modalImg = document.getElementById('modalImg');
-  const closeBtn = document.querySelector('.close');
+  const closeModal = document.querySelector('.close');
+  const images = document.querySelectorAll('.details-image');
 
-  if (modal && img && modalImg && closeBtn) {
+  images.forEach(img => {
     img.addEventListener('click', function () {
       modal.style.display = 'block';
       modalImg.src = this.src;
     });
+  });
 
-    closeBtn.addEventListener('click', function () {
+  closeModal.addEventListener('click', function () {
+    modal.style.display = 'none';
+  });
+
+  // Close modal when clicking outside the image
+  modal.addEventListener('click', function (event) {
+    if (event.target === modal) {
       modal.style.display = 'none';
-    });
-
-    modal.addEventListener('click', function (event) {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  }
+    }
+  });
 });
